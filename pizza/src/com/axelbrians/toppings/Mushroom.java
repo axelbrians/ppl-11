@@ -4,7 +4,6 @@ public class Mushroom extends Topping{
 
     public Mushroom() {
         super();
-
     }
 
     @Override

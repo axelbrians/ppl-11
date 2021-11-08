@@ -4,7 +4,6 @@ public class Onion extends Topping {
 
     public Onion() {
         super();
-
     }
 
     @Override

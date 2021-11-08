@@ -1,6 +1,6 @@
 package com.axelbrians;
 
-import com.axelbrians.pizza.Pizza;
+import com.axelbrians.pizza.PizzaImpl;
 import com.axelbrians.toppings.*;
 
 import java.util.ArrayList;
@@ -13,7 +13,7 @@ public class Main {
 
     private static Scanner scanner = new Scanner(System.in);
 
-    private static ArrayList<Pizza> pizzas = new ArrayList<>();
+    private static ArrayList<PizzaImpl> pizzas = new ArrayList<>();
 
     public static void main(String[] args) {
         boolean loop = true;
@@ -48,11 +48,11 @@ public class Main {
     }
 
     private static void moveToAddPizza() {
-        String addPizzaHelp = "Now you are creating pizza, choose your own toppings\n" + Topping.PEPPERONI + "\n" + Topping.MUSHROOM + "\n" + Topping.ONION + "\n" + Topping.BASIL + "\n" + Topping.SAUSAGE + "\n" +  Topping.TOPPINGS + "\n" + Topping.BAKE + "\n" + Topping.DUMP + "\n(help) Show this list of command";
+        String addPizzaHelp = "Now you are creating pizza, choose your own toppings\n" + Topping.PEPPERONI + "\n" + Topping.MUSHROOM + "\n" + Topping.ONION + "\n" + Topping.BASIL + "\n" + Topping.SAUSAGE + "\n" +  Topping.TOPPINGS + "\n" + Topping.PRUNE + "\n" +  Topping.BAKE + "\n" + Topping.DUMP + "\n(help) Show this list of command";
         System.out.println(addPizzaHelp);
 
         boolean loop = true;
-        Pizza pizza = new Pizza();
+        PizzaImpl pizza = new PizzaImpl();
 
         while (loop) {
             String input = scanner.nextLine();
@@ -85,6 +85,10 @@ public class Main {
 
                 case "toppings":
                     System.out.println("Your pizza toppings : " + pizza.currentToppings());
+                    break;
+                case "prune":
+                    pizza.removeAllTopping();
+                    System.out.println("All toppings removed\n");
                     break;
                 case "bake":
                     System.out.println("\n=== Succesfully baked! ===\n");

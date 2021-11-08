@@ -4,7 +4,6 @@ public class Sausage extends Topping {
 
     public Sausage() {
         super();
-
     }
 
     @Override

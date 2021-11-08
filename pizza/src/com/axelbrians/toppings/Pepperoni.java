@@ -4,7 +4,6 @@ public class Pepperoni extends Topping {
 
     public Pepperoni() {
         super();
-
     }
 
     @Override
